@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="#aadce9">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/search_bar">
+
+            <AutoCompleteTextView
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:id="@+id/editTextQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:hint="도착 대여소 검색"
+                android:textColor="#b0b2b4"
+                android:ems="10" />
+
+            <requestFocus />
+            <ImageView
+                android:id="@+id/buttonSearch"
+                android:layout_width="10dp"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="center_vertical"
+                android:src ="@drawable/search"/>
+
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#888888">
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_marginTop="60dp"
+            android:id="@+id/stop_staiton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="도착지 : 선택되지 않았습니다."
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/btn_rent"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="대여하기"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+</LinearLayout>

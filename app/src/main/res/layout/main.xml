@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp">
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/main_background">
+        <TextView
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자전거 잠그미"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_above="@+id/using"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="이미정 회원님"/>
+        <TextView
+            android:id="@+id/using"
+            android:layout_alignParentBottom="true"
+            android:text="안녕"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp "
+        android:layout_weight="1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/menu1"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rent"/>
+        <Button
+            android:id="@+id/menu2"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/park"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <Button
+            android:id="@+id/menu3"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roadfind"/>
+        <Button
+            android:id="@+id/menu4"
+            android:layout_width="40dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/setting"/>
+    </LinearLayout>
+
+</LinearLayout>

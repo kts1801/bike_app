@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="#aadce9">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/search_bar">
+
+            <AutoCompleteTextView
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:id="@+id/editTextQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:hint="대여소 검색"
+                android:textColor="#b0b2b4"
+                android:ems="10" />
+
+            <requestFocus />
+            <ImageView
+                android:id="@+id/buttonSearch"
+                android:layout_width="10dp"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="center_vertical"
+                android:src ="@drawable/search"/>
+
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6cbbe291">
+        <RelativeLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/btnShowLocation"
+                android:background="@drawable/refresh"
+                android:longClickable="false"
+                android:allowUndo="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+        <SlidingDrawer
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:handle="@+id/handle"
+            android:content="@+id/content"
+            android:layout_alignParentBottom="true"
+            >
+            <Button
+                android:id="@+id/handle"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/tumyeong"/>
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_a"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="대여소 정보"
+                        android:textColor="#000000"
+                        style="@style/StationTheme"
+                        android:background="@drawable/btn_selector"/>
+                    <Button
+                        android:id="@+id/btn_b"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="도착예정정보"
+                        android:textColor="#000000"
+                        style="@style/StationTheme"
+                        android:background="@drawable/btn_selector"/>
+                    <Button
+                        android:id="@+id/btn_c"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="자전거 추천"
+                        android:textColor="#000000"
+                        style="@style/StationTheme"
+                        android:background="@drawable/btn_selector"/>
+
+                </LinearLayout>
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </SlidingDrawer>
+
+    </RelativeLayout>
+
+</LinearLayout>
